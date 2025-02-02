@@ -23,3 +23,27 @@ document.getElementById('themeToggle').addEventListener('click', () => {
   const popoverList = [...popoverTriggerList].map(
     (popoverTriggerListEl) => new bootstrap.Popover(popoverTriggerListEl)
   );
+
+// tiltások
+document.addEventListener("contextmenu", (e) => e.preventDefault()); // Jobb klikk tiltása
+
+document.addEventListener("keydown", (e) => {
+  // F12, Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+U tiltása
+  if (
+    e.key === "F12" ||
+    (e.ctrlKey && e.shiftKey && e.key === "I") ||
+    (e.ctrlKey && e.shiftKey && e.key === "C") ||
+    (e.ctrlKey && e.key === "u")
+  ) {
+    e.preventDefault();
+    alert("A fejlesztői eszközök használata tilos!");
+  }
+});
+
+const checkDevTools = () => {
+  const widthThreshold = window.outerWidth - window.innerWidth;
+  if (widthThreshold > 160) {
+    document.body.innerHTML = "<h1>Hozzáférés megtagadva!</h1>";
+  }
+};
+setInterval(checkDevTools, 1000);
