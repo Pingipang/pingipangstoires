@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pingi Novellái</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../novells/css/style.css">
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand fw-bold"
+          href="#"
+          style="color: var(--primary-color)"
+          >Történeteim</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#novells">Novellák</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about-me">Rólam</a>
+            </li>
+            <li class="nav-item">
+              <button id="themeToggle" class="btn btn-link nav-link">🌓</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="py-5 mt-5">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h1
+              class="display-4 fw-bold mb-4"
+              style="color: var(--primary-color)"
+            >
+              Pingipang történetei
+            </h1>
+            <p class="lead text-muted">
+              "Ahol a csillagok finoman kísérnek, minden lépés új, elfeledett
+              utazás kezdetét jelzi."
+            </p>
+            <p class="lead text-muted">Egy elfeledett író.</p>
+            <div
+              class="mt-4 border-top border-2 pt-4"
+              style="border-color: var(--primary-color) !important"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Novels-->
+    <section id="novells" class="novells my-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div
+            class="col-md-6 offset-md-3 d-flex flex-column align-items-center text-center"
+          >
+            <h4
+              class="display-6 fw-bold mb-4"
+              style="color: var(--primary-color)"
+            >
+              Rövid novellák
+            </h4>
+          </div>
+        </div>
+        <!-- Novells Row 1 -->
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card text-muted">
+              <img src="" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">A dobogó legfelsőfokán</h5>
+                <p class="card-text">
+                  Egy elszánt sportoló mindent feltesz arra, hogy végre elérje a
+                  csúcsot, de a sorsnak más tervei vannak vele.
+                </p>
+                <a href="storis/novells/dobogo.html">Elolvasom...</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card text-muted">
+              <img src="" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Az emberiség utolsó napja</h5>
+                <p class="card-text">
+                  Egy idős ember visszaemlékezései során kirajzolódik, hogyan
+                  jutott el az emberiség a végzetéhez, és mi volt az a végzetes
+                  hiba, amit senki sem vett észre időben.
+                </p>
+                <a href="stories/novells/utolsoEmber.html">Elolvasom...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-transparent">
+      <div class="container">
+          <div class="footer-content">
+              <p class="text-muted-custom mb-5">
+                  © <span id="currentYear"></span> A történeteken - Minden jog fenntartva
+              </p>
+          </div>
+      </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

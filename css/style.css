@@ -1,0 +1,75 @@
+/* === Colors === */
+:root {
+  --bg-color: #ffffff;
+  --text-color: ##2d2d2d;
+  --card-bg: #ffffff;
+  --border-color: #dee2e6;
+  --primary-color: #b68d40;
+  --muted-color: ##2d2d2d;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0a0a0a;
+  --text-color: #e8e8e8;
+  --card-bg: #1a1a1a;
+  --border-color: #343a40;
+  --muted-color: #e8e8e8;
+}
+
+/* Basic */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--card-bg) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand {
+  color: var(--primary-color);
+}
+
+.nav-link {
+  color: var(--text-color) !important;
+}
+
+/* Cards */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Texts */
+.text-muted {
+  color: var(--muted-color) !important;
+}
+
+/* Buttons */
+.btn-outline-primary {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.hover-effect {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.border-custom {
+  border-color: var(--primary-color) !important;
+}
