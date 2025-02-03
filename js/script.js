@@ -40,10 +40,10 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-const checkDevTools = () => {
+/* const checkDevTools = () => {
   const widthThreshold = window.outerWidth - window.innerWidth;
   if (widthThreshold > 160) {
     document.body.innerHTML = "<h1>Hozzáférés megtagadva!</h1>";
   }
 };
-setInterval(checkDevTools, 1000);
+setInterval(checkDevTools, 1000) */;
