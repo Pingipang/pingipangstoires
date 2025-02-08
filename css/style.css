@@ -73,6 +73,34 @@ body {
 .border-custom {
   border-color: var(--primary-color) !important;
 }
+
+.share-buttons {
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+  color: var(--primary-color)
+}
+
+.btn-facebook {
+  background: #1877f2;
+  color: white !important;
+}
+
+.btn-twitter {
+  background: #1da1f2;
+  color: white !important;
+}
+
+.btn-linkedin {
+  background: #0a66c2;
+  color: white !important;
+}
+
+.btn-facebook:hover,
+.btn-twitter:hover,
+.btn-linkedin:hover {
+  background-color: #0a0a0a;
+}
+
 .no-select {
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
