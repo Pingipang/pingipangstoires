@@ -1,34 +1,25 @@
-document.getElementById('themeToggle').addEventListener('click', () => {
-    const body = document.body;
-    const currentTheme = body.getAttribute('data-theme');
-    
-    if (currentTheme === 'dark') {
-      body.setAttribute('data-theme', 'light');
-      localStorage.setItem('theme', 'light');
-    } else {
-      body.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
-    }
-  });
-  
-  document.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.body.setAttribute('data-theme', savedTheme);
-  });
+document.getElementById("themeToggle").addEventListener("click", () => {
+  const body = document.body;
+  const currentTheme = body.getAttribute("data-theme");
 
-  const popoverTriggerList = document.querySelectorAll(
-    '[data-bs-toggle="popover"]'
-  );
+  if (currentTheme === "dark") {
+    body.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
+  } else {
+    body.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+  }
+});
 
-  const popoverList = [...popoverTriggerList].map(
-    (popoverTriggerListEl) => new bootstrap.Popover(popoverTriggerListEl)
-  );
+document.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme") || "light";
+  document.body.setAttribute("data-theme", savedTheme);
+});
 
-// tiltások
-document.addEventListener("contextmenu", (e) => e.preventDefault()); // Jobb klikk tiltása
+
+document.addEventListener("contextmenu", (e) => e.preventDefault());
 
 document.addEventListener("keydown", (e) => {
-  // F12, Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+U tiltása
   if (
     e.key === "F12" ||
     (e.ctrlKey && e.shiftKey && e.key === "I") ||
@@ -40,10 +31,30 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-/* const checkDevTools = () => {
-  const widthThreshold = window.outerWidth - window.innerWidth;
-  if (widthThreshold > 160) {
-    document.body.innerHTML = "<h1>Hozzáférés megtagadva!</h1>";
-  }
-};
-setInterval(checkDevTools, 1000) */;
+function initShareButtons() {
+  const shareButtons = document.querySelectorAll("[data-platform]");
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  shareButtons.forEach((button) => {
+    const platform = button.getAttribute("data-platform");
+    let url;
+
+    switch (platform) {
+      case "facebook":
+        url = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+        break;
+      case "twitter":
+        url = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+        break;
+      case "linkedin":
+        url = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+        break;
+    }
+
+    button.setAttribute("href", url);
+    button.setAttribute("target", "_blank");
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initShareButtons);
